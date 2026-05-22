@@ -14,7 +14,7 @@ namespace CRUDTask.Controllers
         }
         public IActionResult Create()
         {
-            return View("Create");
+            return View("Create", new User());
         }
         public IActionResult Store(User Request)
         {
@@ -24,7 +24,7 @@ namespace CRUDTask.Controllers
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View("Create");
+            return View("Create", Request);
         }
         public IActionResult Details(int id)
         {
