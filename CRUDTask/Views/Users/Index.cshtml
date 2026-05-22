@@ -1,6 +1,8 @@
 ﻿@model List<User> //typed view
 
-<h1>All Users</h1>
+@section MainHeading{
+All Users
+}
 
 <a href="/Users/Create" class="btn btn-outline-info">Create New User</a>
 @if(Model.Any())

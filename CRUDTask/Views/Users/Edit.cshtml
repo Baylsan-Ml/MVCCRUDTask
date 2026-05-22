@@ -1,8 +1,9 @@
 ﻿@model User
 
-<div class="d-flex flex-column align-items-center">
-    <h1 class="m-auto fs-3">Edit User</h1>
-</div>
+@section MainHeading{
+Edit User
+}
+
 
 <form method="post" action="/Users/Update">
     <input type="hidden" name="Id" value="@Model.Id" />
