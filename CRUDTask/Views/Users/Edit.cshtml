@@ -1,0 +1,22 @@
+﻿@model User
+
+<div class="d-flex flex-column align-items-center">
+    <h1 class="m-auto fs-3">Edit User</h1>
+</div>
+
+<form method="post" action="/Users/Update">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div>
+        <label name="Name">Name</label>
+        <input type="text" name="Name" value="@Model.Name" class="form-control" />
+    </div>
+    <div>
+        <label name="Age">Age</label>
+        <input type="number" name="Age" value="@Model.Age" class="form-control" />
+    </div>
+    <div>
+        <label name="City">City</label>
+        <input type="text" name="City" value="@Model.City" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-info mt-2">Update</button>
+</form>

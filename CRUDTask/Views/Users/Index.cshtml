@@ -1,0 +1,21 @@
+﻿@model List<User> //typed view
+
+<h1>All Users</h1>
+
+<a href="/Users/Create" class="btn btn-outline-info">Create New User</a>
+@if(Model.Any())
+{
+    @foreach (var user in Model)
+    {
+        <h2>Name: @user.Name</h2>
+        <a href="/Users/Details/@user.Id" class="btn btn-secondary">Details</a>
+        <a href="/Users/Edit/@user.Id" class="btn btn-secondary">Edit</a>
+        <a href="/Users/Delete/@user.Id" class="btn btn-danger">Delete</a>
+       //<p>Age: @user.Age</p>
+        //<p>City: @user.City</p>
+    }
+}
+else
+{
+    <p>No users found..</p>
+}
