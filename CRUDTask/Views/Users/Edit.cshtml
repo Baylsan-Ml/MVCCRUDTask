@@ -5,21 +5,21 @@ Edit User
 }
 
 
-<form method="post" action="/Users/Update">
-    <input type="hidden" name="Id" value="@Model.Id" />
+<form method="post" asp-controller="Users" asp-action="Update">
+    <input type="hidden" asp-for="Id" />
     <div>
-        <label name="Name">Name</label>
-        <input type="text" name="Name" value="@Model.Name" class="form-control" />
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div>
-        <label name="Age">Age</label>
-        <input type="number" name="Age" value="@Model.Age" class="form-control" />
+        <label asp-for="Age"></label>
+        <input type="number" asp-for="Age" class="form-control" />
         <span asp-validation-for="Age" class="text-danger"></span>
     </div>
     <div>
-        <label name="City">City</label>
-        <input type="text" name="City" value="@Model.City" class="form-control" />
+        <label asp-for="City"></label>
+        <input type="text" asp-for="City" class="form-control" />
         <span asp-validation-for="City" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-info mt-2">Update</button>
